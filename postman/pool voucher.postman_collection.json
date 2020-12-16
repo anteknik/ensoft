@@ -1,0 +1,98 @@
+{
+	"id": "44b5d5d0-8cb8-11ef-a805-56512fc6dd5a",
+	"name": "pool voucher",
+	"description": "",
+	"order": [
+		"d618c819-5d41-6df3-0072-5e55c793a229",
+		"cf571d1c-2d3b-0b09-6642-573dcfb5c811",
+		"13828960-3b21-9be3-a270-4e01eff8569f"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1608084577837,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "13828960-3b21-9be3-a270-4e01eff8569f",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/voucher?voucher=7a7b8bfd&email=a@be.com",
+			"queryParams": [
+				{
+					"key": "voucher",
+					"value": "7a7b8bfd",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "email",
+					"value": "a@be.com",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1608090617310,
+			"name": "search voucher discount",
+			"description": "which receives a Voucher Code and Email and validates the\r\nVoucher Code. In Case it is valid, return the Percentage Discount and set the date of usage.\r\n\r\n\r\nhttp://localhost:8080/voucher?voucher=7a7b8bfd&email=a@be.com",
+			"collectionId": "44b5d5d0-8cb8-11ef-a805-56512fc6dd5a",
+			"responses": []
+		},
+		{
+			"id": "cf571d1c-2d3b-0b09-6642-573dcfb5c811",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/search/1",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1608084857630,
+			"name": "search voucher",
+			"description": "Search voucher by id, id float number",
+			"collectionId": "44b5d5d0-8cb8-11ef-a805-56512fc6dd5a",
+			"responses": []
+		},
+		{
+			"id": "d618c819-5d41-6df3-0072-5e55c793a229",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/add/2020-12-16",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1608084696461,
+			"name": "init data",
+			"description": "For a given Special Offer and an expiration date, generate for each Recipient a Voucher Code\n\n\nhttp://localhost:8080/add/{expired date voucher}",
+			"collectionId": "44b5d5d0-8cb8-11ef-a805-56512fc6dd5a",
+			"responses": []
+		}
+	]
+}
