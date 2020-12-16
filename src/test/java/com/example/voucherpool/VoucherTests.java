@@ -41,9 +41,9 @@ class VoucherTests {
 		user0.setEmail("d@be.com");
 		User user1 = new User("dini", "d@be.com");
 		Offer promo1 = new Offer("2020-12-25");
-		//promo1.setUser(user0);
-		Offer promo2 = new Offer("2020-12-25");
-		//promo2.setUser(user1);
+		promo1.setUser(user0);
+		Offer promo2 = new Offer("2020-12-31");
+		promo2.setUser(user1);
 		//recipientRepo.save(user0);
 		//recipientRepo.save(user1);
 		offerRepo.save(promo1);
@@ -53,7 +53,7 @@ class VoucherTests {
 		//logger.info(promo2.getUser().getName()+" "+promo2.getVoucher().getVoucherId());
 		//boolean byId = offerRepo.existsById(1l);
 		Optional<Offer> id = offerRepo.findById(1l);
-		//id.ifPresent(t -> logger.info(t.getUser().getName()+"--> "+t.getUser().getEmail() +"--> "+t.getVoucher().getVoucherId()));
+		id.ifPresent(t -> logger.info(t.getUser().getName()+"--> "+t.getUser().getEmail() +"--> "+t.getVoucher().getVoucherId()));
 		//id.ifPresent(t -> assertThat(t.getVoucher().getVoucherId()).isEqualTo(promo1.getVoucher().getVoucherId()));
 				
 	}
