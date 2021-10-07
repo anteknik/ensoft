@@ -1,22 +1,21 @@
 package net.nadisa.upwork.domain;
 
-import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.OneToMany;
-import lombok.Getter;
-import lombok.Setter;
+import javax.persistence.ManyToOne;
+import lombok.Data;
 
+/**
+ *
+ * @author mayanton
+ */
 @Entity
-@Getter @Setter
-public class Product implements Serializable {
+@Data
+public class Category {
 
     @Id
     @GeneratedValue
@@ -24,4 +23,7 @@ public class Product implements Serializable {
 
     private String name;
     
+    @ManyToOne( )
+    private Product product;
+
 }
